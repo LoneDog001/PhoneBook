@@ -33,17 +33,17 @@ public class PhoneBookTest {
 
     @ParameterizedTest
     @MethodSource("sourceFindByName")
-    public void testFindByNumber(String inputName, int expected) {
-        phoneBookTest.add("Andrey", "44444");
-        String result = phoneBookTest.findByNumber(inputName);
+    public void testFindByNumber(String inputNumber, String expected) {
+        phoneBookTest.add("Andrey", "41238");
+        String result = phoneBookTest.findByNumber(inputNumber);
         assertEquals(expected, result);
     }
 
     public static Stream<Arguments> sourceFindByName() {
         return Stream.of(
-                Arguments.of("", "44444"),
-                Arguments.of(null, "747546"),
-                Arguments.of(null, "1247856")
+                Arguments.of("Andrey", "41238"),
+                Arguments.of( "Kolya", null),
+                Arguments.of("Petya", null)
         );
     }
 }

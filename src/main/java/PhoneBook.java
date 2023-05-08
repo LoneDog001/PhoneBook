@@ -12,7 +12,10 @@ public class PhoneBook {
         return phoneBook.size();
     }
 
-    public String findByNumber(String name){
-        return null;
+    public String findByNumber(String number){
+        if (!phoneBook.containsKey(number)){
+            return null;
+        }
+        return phoneBook.get(number);
     }
 }
