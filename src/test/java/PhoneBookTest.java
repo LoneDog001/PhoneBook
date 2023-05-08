@@ -25,9 +25,9 @@ public class PhoneBookTest {
 
     public static Stream <Arguments> sourceAdd(){
         return Stream.of(
-                Arguments.of("Andrey", "44444", 4),
+                Arguments.of("Andrey", "44444", 1),
                 Arguments.of("Kolya", "4521477", 2),
-                Arguments.of("Sergey", "1247856", 15)
+                Arguments.of("Sergey", "1247856", 3)
         );
     }
 
